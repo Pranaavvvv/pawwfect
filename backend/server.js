@@ -10,10 +10,11 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: 'https://pawwfect-xdqq.vercel.app/', // 
+  origin: 'http://localhost:3001', // Allow local development (React app running on localhost:3000)
   methods: ['GET', 'POST'],
-  credentials: true
+  credentials: true,
 }));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
